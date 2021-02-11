@@ -8,6 +8,8 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon'; 
+import {MatListModule} from '@angular/material/list';
+import {MatSidenavModule} from '@angular/material/sidenav'; 
 
 @NgModule({
   declarations: [
@@ -15,9 +17,9 @@ import {MatIconModule} from '@angular/material/icon';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    AppRoutingModule,MatListModule,
     BrowserAnimationsModule, MatCardModule, MatToolbarModule, MatIconModule,
-    MatButtonModule
+    MatButtonModule,MatSidenavModule
     
   ],
   providers: [],

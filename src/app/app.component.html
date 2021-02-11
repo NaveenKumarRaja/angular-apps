@@ -1,10 +1,26 @@
-<mat-toolbar>
-    <mat-toolbar-row>
-        <span>Fund Details</span>
-        <span class="example-spacer"></span>
-        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-            <mat-icon>menu</mat-icon></button>
-        <button mat-icon-button><mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">settings</mat-icon></button>  
-        <button mat-icon-button><mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon">delete</mat-icon></button>   
-    </mat-toolbar-row>
-</mat-toolbar>
+<p>
+    <mat-toolbar style="background-color: rgb(224, 0, 94);" >
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon></button>
+      <span>Fund Details</span>
+      <span class="example-spacer"></span>
+      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon>settings</mat-icon></button>
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <mat-icon>home</mat-icon></button>
+    </mat-toolbar>
+  </p>
+  <mat-sidenav-container>
+    <mat-sidenav mode="side" opened>
+<mat-nav-list style="width: 200px;">
+  <a mat-list-item style="height: 50px;"><mat-icon>person</mat-icon>Customer Details</a>
+  <a mat-list-item style="height: 50px;"><mat-icon>calendar_today</mat-icon>Weekly Subscription</a>
+  <a mat-list-item style="height: 50px;"><mat-icon>account_balance</mat-icon>Loan Details</a>
+
+</mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <p style="height: 88vh"></p>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+  
