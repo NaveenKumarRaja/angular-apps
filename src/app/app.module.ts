@@ -14,15 +14,19 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatDatepickerModule} from '@angular/material/datepicker'; 
+import {MatTreeModule} from '@angular/material/tree'; 
+import {MatButtonToggleModule} from '@angular/material/button-toggle'; 
 import { RouterModule, Routes } from '@angular/router';
 import { CFComponent } from './cf/cf.component';
 import { WsComponent } from './ws/ws.component';
+import { LoansComponent } from './loans/loans.component';
 
 
 
 const routes: Routes = [
   {path:'customer form',component:CFComponent},
-  {path:'weekly form',component:WsComponent},
+  {path:'ws',component:WsComponent},
+  {path:'loans',component:LoansComponent}
 
 ];
 @NgModule({
@@ -30,15 +34,17 @@ const routes: Routes = [
     AppComponent,
     CFComponent,
     WsComponent,
+    LoansComponent,
     
   
   ],
   imports: [
-    BrowserModule,MatFormFieldModule,
+    BrowserModule,MatFormFieldModule,MatTreeModule,
     FormsModule, ReactiveFormsModule,MatDatepickerModule,
     AppRoutingModule,MatListModule,MatInputModule,
     BrowserAnimationsModule, MatCardModule, MatToolbarModule, MatIconModule,
-    MatButtonModule,MatSidenavModule, RouterModule.forRoot(routes)
+    MatButtonModule,MatSidenavModule, RouterModule.forRoot(routes),
+    MatButtonToggleModule
     
   ],
   providers: [],
