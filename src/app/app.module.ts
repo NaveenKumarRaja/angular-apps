@@ -8,14 +8,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatIconModule} from '@angular/material/icon'; 
+import {MatIconModule} from '@angular/material/icon';
 import {MatListModule} from '@angular/material/list';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
-import {MatDatepickerModule} from '@angular/material/datepicker'; 
-import {MatTreeModule} from '@angular/material/tree'; 
-import {MatButtonToggleModule} from '@angular/material/button-toggle'; 
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
+import {MatTreeModule} from '@angular/material/tree';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import { RouterModule, Routes } from '@angular/router';
 import { CFComponent } from './cf/cf.component';
 import { WsComponent } from './ws/ws.component';
@@ -23,10 +24,11 @@ import { LoansComponent } from './loans/loans.component';
 
 
 
+
 const routes: Routes = [
   {path:'customer form',component:CFComponent},
   {path:'ws',component:WsComponent},
-  {path:'loans',component:LoansComponent}
+  {path:'loans',component:LoansComponent},
 
 ];
 @NgModule({
@@ -35,21 +37,22 @@ const routes: Routes = [
     CFComponent,
     WsComponent,
     LoansComponent,
-    
-  
+
+
   ],
   imports: [
     BrowserModule,MatFormFieldModule,MatTreeModule,
     FormsModule, ReactiveFormsModule,MatDatepickerModule,
     AppRoutingModule,MatListModule,MatInputModule,
     BrowserAnimationsModule, MatCardModule, MatToolbarModule, MatIconModule,
+    MatButtonToggleModule,MatNativeDateModule,
     MatButtonModule,MatSidenavModule, RouterModule.forRoot(routes),
-    MatButtonToggleModule
-    
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {
-  
+
  }
