@@ -1,26 +1,24 @@
 <mat-form-field style="width: 30%;margin-left: 20%;margin-top: 10%;font-family: 'Times New Roman', Times, serif;">
-     <input matInput placeholder="Enter customer Name">
-  </mat-form-field><br>
-
-<mat-form-field style="width: 30%;margin-left: 20%;font-family: 'Times New Roman', Times, serif;">
-    <input type="text" matInput placeholder="Enter place">
-   </mat-form-field><br>
-
-<mat-form-field style="width: 30%;margin-left: 20%;font-family: 'Times New Roman', Times, serif;">
-   <input matInput placeholder="XXX-XXX-XXXX">
+  <input matInput placeholder="Enter customer Name">
 </mat-form-field><br>
-<button style="margin-left: 25%;" class="submit" mat-raised-button>submit</button>
+
+<mat-form-field style="width: 30%;margin-left: 20%;font-family: 'Times New Roman', Times, serif;">
+  <input type="text" matInput placeholder="Enter place">
+</mat-form-field><br>
 
 <form class="example-form" [formGroup]="userAddressValidations">
-	<mat-form-field appearance="outline" class="col-sm-6">
-		<mat-label>10-digit Mobile Number</mat-label>
-		<input matInput formControlName="mobileNumber" maxlength="10" (keypress)=_keyPress($event)>
-		<mat-error *ngIf="userAddressValidations.get('mobileNumber').hasError('required')">
-			Please fill out this field.
-		</mat-error>
-		<mat-error *ngIf="userAddressValidations.get('mobileNumber').hasError('pattern')">
-			It is not a valid mobile number.
-		</mat-error>
-	</mat-form-field>
+  <mat-form-field class="mble" style="margin-left: 20%;">
+    <mat-label>10-digit Mobile Number</mat-label>
+    <input matInput formControlName="mobileNumber" maxlength="10" (keypress)=_keyPress($event)>
+  </mat-form-field>
+</form><br>
 
-</form>
+<mat-form-field style="margin-left: 20%; margin-top: -20%;">
+  <mat-label>Number of Funds</mat-label>
+  <mat-select>
+    <li *ngFor="let num of numberOfFunds">
+      <mat-option value= "num">{{num}}</mat-option>
+    </li>
+  </mat-select>
+</mat-form-field><br>
+<button style="margin-left: 20%;margin-top: 5%;width: 30%;" class="submit" mat-raised-button>submit</button><br>

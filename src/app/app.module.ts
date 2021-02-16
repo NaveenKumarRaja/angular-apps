@@ -17,10 +17,13 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
 import {MatTreeModule} from '@angular/material/tree';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatSelectModule} from '@angular/material/select';
 import { RouterModule, Routes } from '@angular/router';
 import { CFComponent } from './cf/cf.component';
 import { WsComponent } from './ws/ws.component';
 import { LoansComponent } from './loans/loans.component';
+import { AllCustomerDetailsComponent } from './all-customer-details/all-customer-details.component';
 
 
 
@@ -37,6 +40,7 @@ const routes: Routes = [
     CFComponent,
     WsComponent,
     LoansComponent,
+    AllCustomerDetailsComponent,
 
 
   ],
@@ -45,7 +49,8 @@ const routes: Routes = [
     FormsModule, ReactiveFormsModule,MatDatepickerModule,
     AppRoutingModule,MatListModule,MatInputModule,
     BrowserAnimationsModule, MatCardModule, MatToolbarModule, MatIconModule,
-    MatButtonToggleModule,MatNativeDateModule,
+    MatButtonToggleModule,MatNativeDateModule,MatPaginatorModule,
+    MatSelectModule,
     MatButtonModule,MatSidenavModule, RouterModule.forRoot(routes),
 
 
