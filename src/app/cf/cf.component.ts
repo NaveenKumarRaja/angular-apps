@@ -34,3 +34,10 @@ export class SelectValueBindingExample {
   selected = 'option2';
 }
 
+export class CustomerForm {
+  name: string;
+  position: number;
+  phone : number;
+  place: string;
+  funds:number;
+}
