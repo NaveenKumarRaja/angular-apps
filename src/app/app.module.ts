@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {CdkTableModule} from '@angular/cdk/table';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -19,12 +20,12 @@ import {MatTreeModule} from '@angular/material/tree';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSelectModule} from '@angular/material/select';
+import { MatTableModule } from '@angular/material/table'
 import { RouterModule, Routes } from '@angular/router';
 import { CFComponent } from './cf/cf.component';
 import { WsComponent } from './ws/ws.component';
 import { LoansComponent } from './loans/loans.component';
-import { AllCustomerDetailsComponent } from './all-customer-details/all-customer-details.component';
-
+import { CustomerDetailComponent } from './customer-detail/customer-detail.component';
 
 
 
@@ -32,6 +33,7 @@ const routes: Routes = [
   {path:'customer form',component:CFComponent},
   {path:'ws',component:WsComponent},
   {path:'loans',component:LoansComponent},
+  {path:'customer details',component:CustomerDetailComponent}
 
 ];
 @NgModule({
@@ -40,7 +42,8 @@ const routes: Routes = [
     CFComponent,
     WsComponent,
     LoansComponent,
-    AllCustomerDetailsComponent,
+    CustomerDetailComponent,
+
 
 
   ],
@@ -50,7 +53,7 @@ const routes: Routes = [
     AppRoutingModule,MatListModule,MatInputModule,
     BrowserAnimationsModule, MatCardModule, MatToolbarModule, MatIconModule,
     MatButtonToggleModule,MatNativeDateModule,MatPaginatorModule,
-    MatSelectModule,
+    MatSelectModule,CdkTableModule,MatTableModule,
     MatButtonModule,MatSidenavModule, RouterModule.forRoot(routes),
 
 
