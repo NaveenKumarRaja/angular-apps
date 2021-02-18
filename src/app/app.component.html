@@ -17,26 +17,34 @@
   </mat-toolbar>
 
   <mat-sidenav-container>
-    <mat-sidenav #snav class="sidenave" mode="side" opened>
+    <mat-sidenav #snav mode="side" opened>
       <mat-nav-list style="width: 200px;">
 
-        <a mat-list-item routerLink='customer form' style="height: 50px;">
+        <a mat-list-item  #CustomerForm routerLink='customer form' style="height: 50px;">
           <mat-icon>person</mat-icon>Customer Details
         </a>
 
 
 
-        <a mat-list-item routerLink='customer details' style="height: 50px;">
+        <a mat-list-item #All CustomerList   routerLink='customer details' style="height: 50px;">
           <mat-icon>people</mat-icon>All Customers List
         </a>
 
 
-        <a mat-list-item routerLink='ws' style="height: 50px;">
+        <a mat-list-item #WeeklyPayments routerLink='ws' style="height: 50px;">
           <mat-icon>calendar_today</mat-icon>Weekly Subscription
         </a>
 
-        <a mat-list-item routerLink='loans' style="height: 50px;">
+        <a mat-list-item #WeeklyPaymentList routerLink='ws' style="height: 50px;">
+          <mat-icon>calendar_today</mat-icon>Weekly Payment List
+        </a>
+
+        <a mat-list-item  #Loans routerLink='loans' style="height: 50px;">
           <mat-icon>account_balance</mat-icon>Loan Details
+        </a>
+
+        <a mat-list-item  #RepaymentLoans routerLink='loans' style="height: 50px;">
+          <mat-icon>account_balance</mat-icon>Repayment Details
         </a>
 
       </mat-nav-list>

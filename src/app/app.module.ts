@@ -17,6 +17,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
 import {MatTreeModule} from '@angular/material/tree';
+import {CdkTreeModule} from '@angular/cdk/tree';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSelectModule} from '@angular/material/select';
@@ -53,7 +54,7 @@ const routes: Routes = [
     AppRoutingModule,MatListModule,MatInputModule,
     BrowserAnimationsModule, MatCardModule, MatToolbarModule, MatIconModule,
     MatButtonToggleModule,MatNativeDateModule,MatPaginatorModule,
-    MatSelectModule,CdkTableModule,MatTableModule,
+    MatSelectModule,CdkTableModule,MatTableModule,CdkTreeModule,
     MatButtonModule,MatSidenavModule, RouterModule.forRoot(routes),
 
 
